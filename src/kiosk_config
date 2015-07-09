@@ -1,0 +1,12 @@
+multifilesrc name=bkgsrc location=./media/bkg/seaside.jpg ! image/jpeg,framerate=30/1 ! jpegdec ! \
+videoscale ! video/x-raw,width=640,height=480 ! videoconvert ! videomixer name=mixer ! \
+videoconvert ! videoscale ! video/x-raw,width=1366,height=768 ! xvimagesink display=:0 \
+v4l2src device=/dev/video0 blocksize=614400 ! \
+videoconvert !  videoflip method=horizontal-flip ! \
+alpha method=3 target-r=76 target-b=9 target-g=183 angle=20 ! mixer. \
+multifilesrc location="./media/circle/Frame %d (100ms).tga" loop=true start_index=1 stop_index=18 caps="image/x-tga,framerate=12/1" ! \
+avdec_targa ! videoscale ! video/x-raw, width=100, height=100 ! \
+videobox border-alpha=0 top=-20 left=-25 ! mixer. \
+multifilesrc location="./media/circle/Frame %d (100ms).tga" loop=true start_index=1 stop_index=18 caps="image/x-tga,framerate=12/1" ! \
+avdec_targa ! videoscale ! video/x-raw, width=100, height=100 ! \
+videobox border-alpha=0 top=-20 left=-500 ! mixer. 

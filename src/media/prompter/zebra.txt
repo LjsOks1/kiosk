@@ -1,0 +1,15 @@
+<span fgcolor="white" bgcolor="black" weight="ultrabold">
+
+
+
+Nem minden fajta szarka 
+farka tarkabarka, csak a 
+tarkabarka farkú 
+szarkafajta farka 
+tarkabarka, mert ha minden 
+fajta szarka farka 
+tarkabarka volna, 
+akkor minden szarkafajta 
+tarkabarka-farkú 
+szarkafajta volna.
+</span>

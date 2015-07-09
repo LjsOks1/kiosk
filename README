@@ -1,0 +1,4 @@
+To build a prompter image, run:
+
+convert -gravity center -background black -alpha copy -stroke yellow \
+-strokewidth 20 pango:<text_file>  <filename.png>
